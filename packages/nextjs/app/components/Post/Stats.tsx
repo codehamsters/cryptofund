@@ -46,7 +46,7 @@ const Stats = ({ address, myAddress, askAmount, totalFunded, interestRate, campa
   const { toast } = useToast();
   // YOU hace already funded.
 
-  console.log("debug fund", fundAmount, fundAmountInDollar, askAmount);
+  console.log("debug fund", fundAmount, fundAmountInDollar, fundAmountInEth, askAmount);
   return (
     <div className="flex flex-col gap-2 w-72 p-2">
       {/* Ask */}

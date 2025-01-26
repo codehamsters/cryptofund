@@ -63,7 +63,7 @@ const TokenSwitcher = ({
       const ethConverted = (toETH[currentCurrency as keyof typeof toETH] as (value: Decimal) => Decimal)(
         new Decimal(value),
       );
-      const ethValueStr = (fromETH.USD as (value: Decimal) => Decimal)(ethConverted).toString();
+      const ethValueStr = ethConverted.toString();
       ethValue = Number(ethValueStr);
     } else {
       ethValue = Number(value);
@@ -114,7 +114,7 @@ const TokenSwitcher = ({
 
     let ethConverted = new Decimal(value);
     if (previousCurrency !== "ETH") {
-      ethConverted = (toETH[previousCurrency as keyof typeof toETH] as (value: Decimal) => Decimal)(new Decimal(value));
+      ethConverted = (toETH[previousCurrency as keyof typeof toETH] as (value: Decimal) => Decimal)(ethConverted);
     }
 
     let currencyConverted = ethConverted;

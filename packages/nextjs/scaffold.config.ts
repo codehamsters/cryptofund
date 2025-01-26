@@ -9,38 +9,32 @@ export type ScaffoldConfig = {
   onlyLocalBurnerWallet: boolean;
 };
 
-const mantaTestnet = /*#__PURE__*/ defineChain({
-  id: 3_441_006,
-  name: "Manta Pacific Testnet",
-  network: "manta-testnet",
+const polygonzkEvmCardonaTesnet = /*#__PURE__*/ defineChain({
+  id: 2442,
+  name: "Polygon zkEvm Cardona Testnet",
   nativeCurrency: {
     decimals: 18,
     name: "ETH",
     symbol: "ETH",
   },
   rpcUrls: {
-    default: { http: ["https://pacific-rpc.sepolia-testnet.manta.network/http"] },
+    default: { http: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"] },
   },
   blockExplorers: {
     default: {
       name: "Manta Testnet Explorer",
-      url: "https://pacific-explorer.sepolia-testnet.manta.network/",
-      apiUrl: "https://pacific-explorer.sepolia-testnet.manta.network/api",
+      url: "https://cardona-zkevm.polygonscan.com/",
+      apiUrl: "https://cardona-zkevm.polygonscan.com/api",
     },
   },
-  contracts: {
-    // multicall3: {
-    //   address: '0x211B1643b95Fe76f11eD8880EE810ABD9A4cf56C',
-    //   blockCreated: 419915,
-    // },
-  },
+  contracts: {},
   testnet: true,
 });
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
   targetNetworks: [
-    mantaTestnet,
+    polygonzkEvmCardonaTesnet,
     // chains.manta, chains.polygonZkEvmTestnet
   ],
 

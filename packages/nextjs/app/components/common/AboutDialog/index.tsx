@@ -35,13 +35,13 @@ const AboutDialog = ({}: AboutDialogProps) => {
         <div className="w-full flex flex-col items-center">
           <img src="/assets/images/logo-gradient-inset-shadow.png" className="h-24 mb-6" />
           <h1 className="font-bold text-3xl">CryptoFund</h1>
-          <h2 className="font-bold text-muted-foreground">Powered by MANTA</h2>
+          <h2 className="font-bold text-muted-foreground">Powered by Polygon zkEVM Testnet</h2>
           <div className="w-full bg-muted rounded-xl p-2 mt-6 flex flex-col items-center">
             <span className="block w-full text-center">
               Developed by <span className="font-bold ml-1">Binary Bois</span>
             </span>
             <span>at</span>
-            <span className="text-lg font-bold">LNMHacks 7.0</span>
+            <span className="text-lg font-bold">HACKTHELEAGUE 2024</span>
           </div>
         </div>
       </DialogContent>

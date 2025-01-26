@@ -6,7 +6,7 @@ import { AggregatorV3Interface } from "@chainlink/contracts/src/v0.8/shared/inte
 library ConversionRates {
 	function getEthValue() internal view returns (int, uint8) {
 		AggregatorV3Interface priceFeed = AggregatorV3Interface(
-			0x694AA1769357215DE4FAC081bf1f309aDC325306
+			0xd94522a6feF7779f672f4C88eb672da9222f2eAc
 		);
 		(, int answer, , , ) = priceFeed.latestRoundData();
 		return (answer, priceFeed.decimals());
